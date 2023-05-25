@@ -2,8 +2,13 @@
 
 SELECT 
     ProductName,
-    Price
+    Price,
+    Suppliers.Country
 FROM [Products]
+JOIN Suppliers ON Products.SupplierID = Suppliers.SupplierID
+
+WHERE 
+Suppliers.Country = 'Germany'
 ORDER BY Price
 LIMIT 2
 ---------------------------------------------------------------------------------
